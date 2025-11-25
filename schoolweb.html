@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Activity Feed</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#00D54B", // A bright green, similar to the screenshot
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#000000", // Changed to black as requested
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem", // 16px
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark font-display">
+<div class="mx-auto max-w-sm h-screen flex flex-col">
+<header class="pt-4 pb-4 px-4 sticky top-0 bg-background-dark z-10">
+<h1 class="text-3xl font-bold text-white mb-4">Activity</h1>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
+                    search
+                </span>
+<input class="w-full bg-[#1C1C1E] border-none rounded-full pl-10 pr-4 py-2.5 text-white placeholder-gray-500 focus:ring-2 focus:ring-primary" placeholder="Search transactions" type="text"/>
+</div>
+</header>
+<main class="flex-grow overflow-y-auto pb-24">
+<div class="pl-4 pb-6">
+<div class="flex space-x-4 overflow-x-auto no-scrollbar">
+<div class="flex flex-col items-center flex-shrink-0 w-16">
+<div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-black text-4xl font-light">add</span>
+</div>
+<span class="text-sm mt-1.5 text-gray-200">Get $20</span>
+</div>
+<div class="flex flex-col items-center flex-shrink-0 w-16 text-center">
+<img alt="Profile picture of Ariya Shingles" class="w-14 h-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHN91ETbYrzbIf2FAh9FJcLlW9rtahgSafR0fl0tQatU9RkNs5mwcV1-MMgXeh4clQKidbgnN0w3a5_xPqktmGURTLrky4AoUFEKuLerwWCd4f5Yf337Y1glBxMC9ufpIQU-1d_Vka3hHh-TQLC810VB6j8OsFcfnfD_Byoi55VzqPvfjnjg-NYUyfI5kui83P-eBgk2aHpGsLuLvdF9p1VCdQUcV34XfZFRAh4C0-5IkFm4IPr9r2aOeCWlhnjo3161YUXQaL5yU"/>
+<span class="text-sm mt-1.5 truncate w-full text-gray-200">Ariya Sh...</span>
+</div>
+<div class="flex flex-col items-center flex-shrink-0 w-16 text-center">
+<img alt="Profile picture of Guillermo Galvan" class="w-14 h-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmm3nz080wdkrZFexStWsqzp8pm1OIshrFSzzrhKKj3KSaP9YAqwcD14JdgaE1EAICUew_YfMzSIUlvt2Wdbmc0wu7dF7YnU8up6lPhWeTroSTJSlfztaF7BFtSrRK3rbbqRHWN1VSXyJrtOUliocrAlqeiKLGmHbSKfXIepM1nduKuyQ_cZ4DsDoqgbx_Q4UtQe3OSVOFn6pQ9qjafyoBMQgKhxwzDD_FIcb1NQ1IOR4ZsJ5F13--MoCBRQsD8NCb-ECe2tyjyR4"/>
+<span class="text-sm mt-1.5 truncate w-full text-gray-200">Guillerm...</span>
+</div>
+<div class="flex flex-col items-center flex-shrink-0 w-16 text-center">
+<img alt="Profile picture of Crystal Ligon" class="w-14 h-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCxnKcyTRvlAxV8GPwmUZl45wJXmEakCsfi4Ss0eV0gMojmt8PNjNALQuYC-qVBXk8ZPPQvH3aNAf73tRKo7ihvDiRhdptAasG48MKyGKQemt47Z-Pga8IxmVjX1QlGk4WRy-o9KdagLa_8kRCXvB2yn25pASaXyWiT-AKxeoF5ObGVA5hgZAUHFO-NzIfk2cDoRMYg_iLpOUvS1gOjbBHmQ6RKjF_XEUXzTAN4TSoaLSoV-HfzTfqftgw722Nsot5cRu5Vgjeq1M"/>
+<span class="text-sm mt-1.5 truncate w-full text-gray-200">Crystal...</span>
+</div>
+<div class="flex flex-col items-center flex-shrink-0 w-16 text-center">
+<div class="w-14 h-14 bg-gray-800 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-gray-300 text-3xl">star</span>
+</div>
+<span class="text-sm mt-1.5 truncate w-full text-gray-200">jsosa</span>
+</div>
+<div class="w-4 flex-shrink-0"></div>
+</div>
+</div>
+<div class="px-4 space-y-2">
+<h2 class="text-xl font-bold text-white mb-3">Today</h2>
+<div class="flex items-center justify-between py-3">
+<div class="flex items-center space-x-4">
+<img alt="Profile picture of Ariya Shingles" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGM5g20TjXMpgrxmrFYJtmsPJbeFCJWxs7Zr5bpY4ezp3X8lxAi3MlVVCkQBmsBwDQ-tIgxxGAPXsoeVaRKarPdkWIwgx6RAMV14z54afEBydTfzUK37Yo7v65kX3fSMHXkAWDrylxmok_G9E_AgmosCOUY2r2Hux42zhC0H_DLArGYvw8PeeRomjResPkdVGyRj8YV5pYzF1zIkTSGGZh_ITWn8bWTYhN009k4EbEDWObsAwImXA30NPJmNnbRExyfykYQJ4168U"/>
+<div>
+<p class="font-semibold text-white">Ariya Shingles</p>
+<p class="text-sm text-gray-400">Fro buying $20 load</p>
+<p class="text-sm text-gray-400">9:18PM</p>
+</div>
+</div>
+<span class="font-semibold text-white">$1,000</span>
+</div>
+<div class="flex items-center justify-between py-3">
+<div class="flex items-center space-x-4">
+<img alt="Profile picture of Guillermo Galvan" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOYSNsjefTVcWIZsY_cxlQgNPKG9QHaSNlXO9vD3oChG0CSSoXNKmabI7FesHJJ6rcF1zeu9ezJfknzUbWgtpKQSOZUaM4xt5vf7k95WrejjGS7iGtkRslhQjp6sYnmiawBRFKb3h6TL5NFUziXk9VH4FIJAIS2swC_XMDEa5wjBf--ZjnZFQsehJi7m_OxVNDfQfDIe1hcu9zb-zb0DqgcvzFsubYCEmBVUDY37rsj3VBKzrN5xV-d47f13Scv2DQvbwx2-ygzmQ"/>
+<div>
+<p class="font-semibold text-white">Guillermo Galvan</p>
+<p class="text-sm text-gray-400">Fro buying $20 load</p>
+<p class="text-sm text-gray-400">9:18PM</p>
+</div>
+</div>
+<span class="font-semibold text-white">$1,000</span>
+</div>
+<div class="flex items-center justify-between py-3">
+<div class="flex items-center space-x-4">
+<img alt="Profile picture of Crystal Ligon" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA78sSKUM4fSCc43k_9cOdv94V2HUkoUo-7R2LqwXA9jtJD8W1JfqncE-EAHb1TqwGeAOVPbBTR4S-8LuYBbudS93vGzYCvCBI5iw727VUKkB5Xwvk6WLM5-ZCwzG4u2Rpgn51OaLU8pgntbNZ7RGFrVhpnqWorRixmAD-ShbCDCyA70mPKbCuW_hZjrjScuBXaBxUcfiJdJ3Ftb1VbCHs0DMMCbcgAccWym_lEJow7HsVd2QTcNNNynV_VXTea920cJTjhxhzoXQc"/>
+<div>
+<p class="font-semibold text-white">Crystal Ligon</p>
+<p class="text-sm text-gray-400">Fro buying $20 load</p>
+<p class="text-sm text-gray-400">9:18PM</p>
+</div>
+</div>
+<span class="font-semibold text-white">$1,000</span>
+</div>
+<div class="flex items-center justify-between py-3">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-gray-300 text-3xl">star</span>
+</div>
+<div>
+<p class="font-semibold text-white">jsosa</p>
+<p class="text-sm text-gray-400">Fro buying $20 load</p>
+<p class="text-sm text-gray-400">9:18PM</p>
+</div>
+</div>
+<span class="font-semibold text-white">$1,000</span>
+</div>
+<div class="flex items-center justify-between py-3">
+<div class="flex items-center space-x-4">
+<img alt="Profile picture of Crystal Ligon" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkJM6hFEGD0Qt276lSwYU682vqf8Ra1bBVXAefM6xkEp14VFpz1hj9zgC2CIOE-2XalohKjO39oAXjeYH3n2Y2AN677MRFDzjEHtrsL2YlZP13Mwd_oYvUPe7AcNFqUAVILQlUv77QLplbL180iUnOU729s95XhB00_wNlBQcw7sXur6n6gZdY4_Ij9iDVzoJYurSyYcPHDK7JYPkIcNi0qcOp8LLCGJs-NMly2O9N_cu1leB0Cix_TiQbfk9Ck-jNU2M1DPJkHz4"/>
+<div>
+<p class="font-semibold text-white">Crystal Ligon</p>
+<p class="text-sm text-gray-400">H</p>
+<p class="text-sm text-gray-400">5:41PM</p>
+</div>
+</div>
+<span class="font-semibold text-white">$8,000</span>
+</div>
+<div class="flex items-center justify-between py-3">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-black text-3xl font-normal">attach_money</span>
+</div>
+<div>
+<p class="font-semibold text-white">Add money</p>
+<p class="text-sm text-gray-400">Chase Bank</p>
+</div>
+</div>
+<span class="font-semibold text-primary">+ $50,000</span>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 max-w-sm mx-auto bg-background-dark border-t border-gray-800">
+<div class="flex justify-around items-center h-20 px-4">
+<div class="flex flex-col items-center">
+<span class="text-2xl font-bold text-white">$44.9K</span>
+</div>
+<a class="p-2 text-gray-300" href="#">
+<span class="material-symbols-outlined text-3xl">crop_square</span>
+</a>
+<a class="p-2 text-gray-300" href="#">
+<span class="material-symbols-outlined text-3xl">attach_money</span>
+</a>
+<a class="p-2 text-gray-300" href="#">
+<span class="material-symbols-outlined text-3xl">search</span>
+</a>
+<a class="p-2 text-primary" href="#">
+<span class="material-symbols-outlined text-3xl">schedule</span>
+</a>
+</div>
+<div class="flex justify-center pb-2">
+<div class="w-32 h-1.5 bg-white rounded-full"></div>
+</div>
+</nav>
+</div>
+
+</body></html>
